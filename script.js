@@ -33,10 +33,17 @@ function checkCode() {
     resultDiv.classList.add('hidden');
     errorDiv.classList.add('hidden');
 
+    // ตรวจสอบว่าโค้ดว่างไหม
+    if (!input) {
+        errorDiv.classList.remove('hidden');
+        return;
+    }
+
     // ตรวจสอบโค้ด
     if (codeDatabase[input]) {
         // โค้ดถูก! แสดงรูป
-        const imagePath = `images/${codeDatabase[input]}`;
+        // แก้ไข: รูปอยู่ที่ root folder ไม่ใช่ images folder
+        const imagePath = codeDatabase[input];
         resultImage.src = imagePath;
         resultImage.alt = `Your special image for code: ${input}`;
         resultDiv.classList.remove('hidden');

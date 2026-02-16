@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 Congratulations! Graduation 2026</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>🎓 ยินดีด้วย! Graduation 2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="stars">⭐</div>
+    
     <div class="container">
-        <h1>🎉 ยินดีด้วย! ขอให้โชคดีเด้อ! 🎓</h1>
-        <p class="subtitle">กรอกโค้ดเพื่อเปิดรูปพิเศษของคุณ ✨</p>
+        <div class="header">
+            <h1 class="title">🎉 ยินดีด้วย! ขอให้โชคดีฮ๊าฟฟู่ว! 🎓</h1>
+            <p class="subtitle">กรอกโค้ดเพื่อเปิดรูปพิเศษของคุณ ✨</p>
+        </div>
         
         <div class="input-section">
-            <input type="text" id="codeInput" placeholder="กรอกโค้ดของคุณที่นี่..." maxlength="50">
-            <button onclick="checkCode()">เปิดรูป 🎁</button>
+            <input 
+                type="text" 
+                id="codeInput" 
+                placeholder="กรอกโค้ดของคุณที่นี่..." 
+                maxlength="50"
+                autocomplete="off"
+            >
+            <button onclick="checkCode()" class="btn-main">เปิดรูป 🎁</button>
         </div>
 
         <div id="result" class="result hidden">
+            <div class="confetti">🎊 🎈 🎉 🎊 🎈</div>
             <img id="resultImage" src="" alt="Your special image">
             <button onclick="downloadImage()" class="download-btn">📥 บันทึกรูป</button>
         </div>
 
         <div id="error" class="error hidden">
-            ❌ โค้ดไม่ถูกต้อง ลองใหม่นะ!
+            <p>❌ โค้ดไม่ถูกต้อง ลองใหม่นะ!</p>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
