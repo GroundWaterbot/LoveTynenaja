@@ -2,7 +2,7 @@
 // รูปแบบ: "CODE_NAME": "filename.png"
 const codeDatabase = {
     "dog": "code_1.png",
-    "ANUN": "code_2.png",
+    "anun": "code_2.png",
     "charno": "code_3.png",
     "auto": "code_4.png",
     "mouse": "code_5.png",
@@ -24,7 +24,7 @@ const codeDatabase = {
 };
 
 function checkCode() {
-    const input = document.getElementById('codeInput').value.trim().toUpperCase();
+    const input = document.getElementById('codeInput').value.trim().toLowerCase();
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
     const resultImage = document.getElementById('resultImage');
@@ -39,14 +39,16 @@ function checkCode() {
         return;
     }
 
-    // ตรวจสอบโค้ด
-    if (codeDatabase[input]) {
+    // ตรวจสอบโค้ด - เปลี่ยนเป็นหา object key ตรงกับการ input
+    if (codeDatabase.hasOwnProperty(input)) {
         // โค้ดถูก! แสดงรูป
-        // แก้ไข: รูปอยู่ที่ root folder ไม่ใช่ images folder
         const imagePath = codeDatabase[input];
         resultImage.src = imagePath;
         resultImage.alt = `Your special image for code: ${input}`;
         resultDiv.classList.remove('hidden');
+        
+        // Clear input
+        document.getElementById('codeInput').value = '';
     } else {
         // โค้ดผิด
         errorDiv.classList.remove('hidden');
@@ -65,8 +67,11 @@ function downloadImage() {
 }
 
 // ให้กดเข้าได้ด้วยปุ่ม Enter
-document.getElementById('codeInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        checkCode();
-    }
-});
+const codeInput = document.getElementById('codeInput');
+if (codeInput) {
+    codeInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkCode();
+        }
+    });
+}
