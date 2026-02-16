@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Congratulations! Graduation 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 ยินดีด้วย! ขอให้โชคดีเด้อ! 🎓</h1>
+        <p class="subtitle">กรอกโค้ดเพื่อเปิดรูปพิเศษของคุณ ✨</p>
+        
+        <div class="input-section">
+            <input type="text" id="codeInput" placeholder="กรอกโค้ดของคุณที่นี่..." maxlength="50">
+            <button onclick="checkCode()">เปิดรูป 🎁</button>
+        </div>
+
+        <div id="result" class="result hidden">
+            <img id="resultImage" src="" alt="Your special image">
+            <button onclick="downloadImage()" class="download-btn">📥 บันทึกรูป</button>
+        </div>
+
+        <div id="error" class="error hidden">
+            ❌ โค้ดไม่ถูกต้อง ลองใหม่นะ!
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
