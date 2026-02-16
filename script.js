@@ -17,7 +17,7 @@ const codeDatabase = {
     "krueye": "code_14.png",
     "sanharn": "code_15.png",
     "bonus": "code_16.png",
-    "congrats": "code_17.png",
+    "gooner": "code_21.png",
     "krutom": "code_18.png",
     "sigma": "code_19.png",
     "doctor": "code_20.png"
