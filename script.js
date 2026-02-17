@@ -16,13 +16,11 @@ const codeDatabase = {
     "star": "code_13.png",
     "krueye": "code_14.png",
     "sanharn": "code_15.png",
-    "bonus": "code_16.png",
+    "monday": "code_16.png",
     "gooner": "code_21.png",
     "krutom": "code_18.png",
     "sigma": "code_19.png",
     "doctor": "code_20.png"
-    "cowboy": "code_23.png"
-    "sawangjit": "code_22.png"
 };
 
 function checkCode() {
