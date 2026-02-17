@@ -21,6 +21,8 @@ const codeDatabase = {
     "krutom": "code_18.png",
     "sigma": "code_19.png",
     "doctor": "code_20.png"
+    "sawangjit": "code_22.png"
+    "cowboy": "code_23.png"
 };
 
 function checkCode() {
